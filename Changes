@@ -1,3 +1,6 @@
+0.003     2011-07-05 18:22:39 Europe/London
+	Check for PadWalker - without it, cycle tests fail
+
 0.002     2011-07-05 07:15:51 Europe/London
 	Add missing dependency on parent.pm for tests
 	Rename event_stack to event_handlers since the original name was misleading (thanks mst)

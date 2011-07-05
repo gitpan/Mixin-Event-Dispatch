@@ -1,5 +1,6 @@
 use strict;
 use warnings;
+
 package EventTest;
 use parent qw(Mixin::Event::Dispatch);
 
@@ -11,6 +12,10 @@ use Test::More;
 use Scalar::Util qw(weaken);
 if(!eval { require Test::Memory::Cycle; }) {
 	plan skip_all => 'Test::Memory::Cycle not installed';
+} elsif(!eval { require PadWalker; }) {
+# need this as well otherwise we get this error in tests:
+#  A code closure was detected in but we cannot check it unless the PadWalker module is installed
+	plan skip_all => 'PadWalker not installed';
 } else {
 	Test::Memory::Cycle->import;
 	plan tests => 7;

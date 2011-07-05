@@ -5,7 +5,7 @@ use warnings;
 use List::UtilsBy ();
 use Try::Tiny;
 
-our $VERSION = 0.002;
+our $VERSION = 0.003;
 
 =head1 NAME
 
@@ -13,7 +13,7 @@ Mixin::Event::Dispatch - mixin methods for simple event/message dispatch framewo
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 SYNOPSIS
 
