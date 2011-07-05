@@ -21,9 +21,10 @@ my %WriteMakefileArgs = (
   'NAME' => 'Mixin::Event::Dispatch',
   'PREREQ_PM' => {
     'List::UtilsBy' => '0',
-    'Try::Tiny' => '0'
+    'Try::Tiny' => '0',
+    'parent' => '0'
   },
-  'VERSION' => '0.001',
+  'VERSION' => '0.002',
   'test' => {
     'TESTS' => 't/*.t'
   }

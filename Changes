@@ -1,2 +1,8 @@
+0.002     2011-07-05 07:15:51 Europe/London
+	Add missing dependency on parent.pm for tests
+	Rename event_stack to event_handlers since the original name was misleading (thanks mst)
+	Fix typo in synopsis
+	Add note about roles
+
 0.001     2011-07-02 21:44:07 Europe/London
 	Initial version.

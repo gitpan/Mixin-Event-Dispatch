@@ -15,4 +15,5 @@ name: Mixin-Event-Dispatch
 requires:
   List::UtilsBy: 0
   Try::Tiny: 0
-version: 0.001
+  parent: 0
+version: 0.002
