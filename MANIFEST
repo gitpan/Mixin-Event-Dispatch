@@ -10,4 +10,8 @@ t/00-pod.t
 t/00-use.t
 t/cycle.t
 t/event.t
+t/release-localbrew-dzil-clean-5.10.1.t
+t/release-localbrew-dzil-clean-5.12.4.t
+t/release-localbrew-dzil-clean-5.14.2.t
+t/release-localbrew-dzil-clean-5.8.9.t
 t/size.t

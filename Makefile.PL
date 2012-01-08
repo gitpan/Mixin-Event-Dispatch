@@ -9,24 +9,26 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'Mixin methods for simple event/message dispatch framework',
-  'AUTHOR' => 'Tom Molesworth <cpan@entitymodel.com>',
-  'BUILD_REQUIRES' => {},
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.30'
+  "ABSTRACT" => "Mixin methods for simple event/message dispatch framework",
+  "AUTHOR" => "Tom Molesworth <cpan\@entitymodel.com>",
+  "BUILD_REQUIRES" => {
+    "Test::More" => "0.84"
   },
-  'DISTNAME' => 'Mixin-Event-Dispatch',
-  'EXE_FILES' => [],
-  'LICENSE' => 'perl',
-  'NAME' => 'Mixin::Event::Dispatch',
-  'PREREQ_PM' => {
-    'List::UtilsBy' => '0',
-    'Try::Tiny' => '0',
-    'parent' => '0'
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
   },
-  'VERSION' => '0.003',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "DISTNAME" => "Mixin-Event-Dispatch",
+  "EXE_FILES" => [],
+  "LICENSE" => "perl",
+  "NAME" => "Mixin::Event::Dispatch",
+  "PREREQ_PM" => {
+    "List::UtilsBy" => 0,
+    "Try::Tiny" => 0,
+    "parent" => 0
+  },
+  "VERSION" => "0.004",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 
