@@ -4,6 +4,9 @@ package EventTest;
 use parent qw(Mixin::Event::Dispatch);
 use Test::More;
 
+# Turn on the fallback to on_* event handlers
+use constant EVENT_DISPATCH_ON_FALLBACK => 1;
+
 sub new { bless {}, shift }
 sub test_event_count { shift->{seen_test_event} }
 sub on_test_event {
@@ -27,7 +30,7 @@ ok($obj->add_handler_for_event('second_test' => sub { ++$second; 0 }), 'can add 
 is($second, 0, 'count is zero before invoking event');
 ok($obj->invoke_event('second_test'), 'can invoke event with queued handler');
 is($second, 1, 'count is 1 after invoking event');
-ok(!$obj->invoke_event('second_test'), 'fails when handler no longer present');
+is($obj->invoke_event('second_test'), $obj, 'still returns $self when handler no longer present');
 is($second, 1, 'count is 1 after invoking event again');
 is($obj->test_event_count, 1, 'event count correct');
 

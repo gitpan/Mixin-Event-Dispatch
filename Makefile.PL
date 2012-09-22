@@ -12,7 +12,9 @@ my %WriteMakefileArgs = (
   "ABSTRACT" => "Mixin methods for simple event/message dispatch framework",
   "AUTHOR" => "Tom Molesworth <cpan\@entitymodel.com>",
   "BUILD_REQUIRES" => {
-    "Test::More" => "0.84"
+    "Test::Fatal" => 0,
+    "Test::More" => "0.98",
+    "Test::Refcount" => 0
   },
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
@@ -26,7 +28,7 @@ my %WriteMakefileArgs = (
     "Try::Tiny" => 0,
     "parent" => 0
   },
-  "VERSION" => "0.004",
+  "VERSION" => 1,
   "test" => {
     "TESTS" => "t/*.t"
   }
