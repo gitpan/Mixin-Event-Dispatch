@@ -3,10 +3,11 @@ package Mixin::Event::Dispatch;
 use strict;
 use warnings;
 use List::UtilsBy ();
+use Scalar::Util ();
 use Try::Tiny;
 use Mixin::Event::Dispatch::Event;
 
-our $VERSION = 1.000;
+our $VERSION = '1.001';
 
 # Key name to use for event handlers. Nothing should be
 # accessing this directly so we don't mind something
@@ -25,7 +26,7 @@ Mixin::Event::Dispatch - mixin methods for simple event/message dispatch framewo
 
 =head1 VERSION
 
-version 1
+version 1.001
 
 =head1 SYNOPSIS
 
@@ -234,7 +235,7 @@ sub unsubscribe_from_event {
 		my ($ev, $code) = splice @_, 0, 2;
 		die 'Undefined event?' unless defined $ev;
 		List::UtilsBy::extract_by {
-			$code
+			Scalar::Util::refaddr($code) == Scalar::Util::refaddr($_)
 		} @{$self->event_handlers->{$ev}} or die "Was not subscribed to $ev for $code";
 	}
 	return $self;
@@ -364,5 +365,5 @@ accessor (to support non-hashref objects) and who patiently tried to explain abo
 
 =head1 LICENSE
 
-Copyright Tom Molesworth 2011-2012, based on code originally part of L<EntityModel>.
+Copyright Tom Molesworth 2011-2013, based on code originally part of L<EntityModel>.
 Licensed under the same terms as Perl itself.

@@ -16,7 +16,7 @@ Mixin::Event::Dispatch::Event - an event object
 
 =head1 VERSION
 
-version 1
+version 1.001
 
 =head1 SYNOPSIS
 

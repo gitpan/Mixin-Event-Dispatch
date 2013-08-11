@@ -1,0 +1,55 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.73.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 01766fd7a1315e8a515e9f27083490bb3ab07741 Changes
+SHA1 64d36cc84e65539410039bc34e4a1b9845c5496d INSTALL
+SHA1 fcecd203a27c044eb4138dc70de012aa384a2234 LICENSE
+SHA1 eadb0c24b67f5bca618038dcb9950cb5bbd687a8 MANIFEST
+SHA1 a83b5dc4afb2007ea0a2b8b2bf740a67e0034070 META.json
+SHA1 645070ce5cb63c1fb70bf1d404ff0185d6ccc795 META.yml
+SHA1 32a1785c336b2fdaa42bee6e37987d2c8ca53d34 Makefile.PL
+SHA1 f9a0d670d8784693a73b2db35d3d9aa3c795f3fd README
+SHA1 1a7f3ebe50520580be3a7710dce515b0074cd414 cpanfile
+SHA1 4f63527f489e0e703b8876b1d5f2e3b0dc42f62a dist.ini
+SHA1 3757a154888041023da50de82f1a92883d72d6b0 examples/benchmark.pl
+SHA1 dac5dacf7ee65433d63da50518f0062c14ab02b0 lib/Mixin/Event/Dispatch.pm
+SHA1 72dcca6e6f35acaff4da07862477c854f5c68ab5 lib/Mixin/Event/Dispatch/Event.pm
+SHA1 90f75289c4dda63c94bc5e897f4996b15d9e42dd t/00-check-deps.t
+SHA1 5b2a0dec2640bd4e2787eeebe8ead4ce2b47e1e4 t/00-compile.t
+SHA1 1e13e1d3f2013e19039b693098d341bb766e1197 t/cycle.t
+SHA1 d69b0b698fe7e26a955af024bc2ebf7df1105b81 t/event.t
+SHA1 216dc70e9071c5dc6eddb7143646fe44487af73f t/refcount.t
+SHA1 d6439cb7f195ebadb010cdf0200f7d816fd330b8 t/size.t
+SHA1 6d3d0c301c10bc355f25b7255e67812b1a5751e8 t/subscribe.t
+SHA1 6f846f7ede312098a614207bcea6fdb2207b8030 xt/author/test-eol.t
+SHA1 198d1665317c3d91e3bb81f0a3b8dad8d4d66f20 xt/release/common_spelling.t
+SHA1 c6c3c9f7fe12058b4771449dff874b1c450c982c xt/release/mojibake.t
+SHA1 4c599e8a4ebb7a899f90ee3c235a64fdbc7e2c06 xt/release/pod-coverage.t
+SHA1 9934d36e45e1143c1a54658bc48872e0591af41b xt/release/pod-syntax.t
+SHA1 fd1fa776fca35fc8f1bdd24ee3fbaa1eca755a44 xt/release/synopsis.t
+SHA1 bbcd59d081d9940af5d43337ae85458075933829 xt/release/test-version.t
+SHA1 ec3f84bfd7a9ce3246e7592f4134100c6b5ce02b xt/release/unused-vars.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.12 (GNU/Linux)
+
+iQEcBAEBAgAGBQJSB2xjAAoJEFKElMNpjtyDBtcIAJl/9yLZ8DnaBIfWVWUNu8zG
+YwRc0z1JQjYZ9LJkeO/GbC1Lal6sP/4XokS9OtCc1VH+x1xUXMkGyLGHxHf9+OB5
+SdHN5ci3q2x/cBPGKCnoyns50hCE1nJAUEjR3KbkgloUzbduvkwgoTzdkF+vFSHm
+aA90PU24HZHaBgVohSbU+CYXOlXIkBe8lwQB2MMmXX46bYgLju5ItaP4wabv0pW6
+t1cBXSjYGVkchnCo77p5oypVld1OHt8d0pNRWyqnqG8t/VOIn3dxTY+VRg0xPXT6
+jljYYfadlcLLKhhOB61VweL/pBLKeu8wO/8AAJnqGRzvzzcMrcsgxT407CP9Qmg=
+=W5Xc
+-----END PGP SIGNATURE-----

@@ -1,4 +1,11 @@
-1         2012-09-22 11:52:51 Europe/London
+1.001     2013-08-11 11:50:10 Europe/London
+	No new features
+	
+	Bug fixes:
+	* unsubscribe_from_event was clearing all handlers for the given event,
+	rather than just the ones matching the requested coderef.
+
+1.000     2012-09-22 11:52:51 Europe/London
 	Provide Mixin::Event::Dispatch::Event class and a more advanced observer
 	model via subscribe_to_event / unsubscribe_from_event.
 
