@@ -1,3 +1,9 @@
+1.002     2013-09-08 18:17:17 Europe/London
+	No new features
+	
+	Bug fixes:
+	* method chaining to a separate Mixin::Event::Dispatch fixed
+
 1.001     2013-08-11 11:50:10 Europe/London
 	No new features
 	
