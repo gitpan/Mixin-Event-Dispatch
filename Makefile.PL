@@ -25,14 +25,13 @@ my %WriteMakefileArgs = (
     "parent" => 0
   },
   "TEST_REQUIRES" => {
-    "Capture::Tiny" => 0,
-    "Test::CheckDeps" => "0.006",
+    "IO::Handle" => 0,
+    "IPC::Open3" => 0,
     "Test::Fatal" => "0.010",
     "Test::More" => "0.98",
-    "Test::Refcount" => "0.07",
-    "blib" => 0
+    "Test::Refcount" => "0.07"
   },
-  "VERSION" => "1.002",
+  "VERSION" => "1.003",
   "test" => {
     "TESTS" => "t/*.t"
   }

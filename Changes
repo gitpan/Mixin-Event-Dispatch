@@ -1,3 +1,11 @@
+1.003     2013-09-10 17:37:27 Europe/London
+	No new features
+	
+	Dependency fixes:
+	* Test::CheckDeps removed - seems that Module::Build::Tiny doesn't play nicely
+	with .deb/.rpm packaging systems, since this is only used for testing have
+	removed for the moment.
+
 1.002     2013-09-08 18:17:17 Europe/London
 	No new features
 	

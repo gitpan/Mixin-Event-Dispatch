@@ -12,7 +12,6 @@ dist.ini
 examples/benchmark.pl
 lib/Mixin/Event/Dispatch.pm
 lib/Mixin/Event/Dispatch/Event.pm
-t/00-check-deps.t
 t/00-compile.t
 t/cycle.t
 t/event.t
