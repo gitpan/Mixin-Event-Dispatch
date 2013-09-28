@@ -1,6 +1,6 @@
 package Mixin::Event::Dispatch::Event;
 {
-  $Mixin::Event::Dispatch::Event::VERSION = '1.003';
+  $Mixin::Event::Dispatch::Event::VERSION = '1.004';
 }
 use strict;
 use warnings;
@@ -18,7 +18,7 @@ Mixin::Event::Dispatch::Event - an event object
 
 =head1 VERSION
 
-version 1.003
+version 1.004
 
 =head1 SYNOPSIS
 

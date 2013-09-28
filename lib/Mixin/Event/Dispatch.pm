@@ -7,7 +7,7 @@ use Scalar::Util ();
 use Try::Tiny;
 use Mixin::Event::Dispatch::Event;
 
-our $VERSION = '1.003';
+our $VERSION = '1.004';
 
 # Key name to use for event handlers. Nothing should be
 # accessing this directly so we don't mind something
@@ -26,7 +26,7 @@ Mixin::Event::Dispatch - mixin methods for simple event/message dispatch framewo
 
 =head1 VERSION
 
-version 1.003
+version 1.004
 
 =head1 SYNOPSIS
 
