@@ -4,10 +4,9 @@ use strict;
 use warnings;
 use List::UtilsBy ();
 use Scalar::Util ();
-use Try::Tiny;
 use Mixin::Event::Dispatch::Event;
 
-our $VERSION = '1.004';
+our $VERSION = '1.005';
 
 # Key name to use for event handlers. Nothing should be
 # accessing this directly so we don't mind something
@@ -26,7 +25,7 @@ Mixin::Event::Dispatch - mixin methods for simple event/message dispatch framewo
 
 =head1 VERSION
 
-version 1.004
+Version 1.005
 
 =head1 SYNOPSIS
 
@@ -359,12 +358,12 @@ to/from events using this class
 
 =head1 AUTHOR
 
-Tom Molesworth <cpan@entitymodel.com>
+Tom Molesworth <cpan@perlsite.co.uk>
 
 with thanks to various helpful people on freenode #perl who suggested making L</event_handlers> into an
 accessor (to support non-hashref objects) and who patiently tried to explain about roles.
 
 =head1 LICENSE
 
-Copyright Tom Molesworth 2011-2013, based on code originally part of L<EntityModel>.
+Copyright Tom Molesworth 2011-2014, based on code originally part of L<EntityModel>.
 Licensed under the same terms as Perl itself.
