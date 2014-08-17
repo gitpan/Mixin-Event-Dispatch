@@ -14,21 +14,24 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 cc8bd173c347be50e25acc6bb46583b8bf3150d7 Changes
+SHA1 9782d4d0b983d690b73831052ca86f2936c32c7f Changes
 SHA1 64d36cc84e65539410039bc34e4a1b9845c5496d INSTALL
 SHA1 8a4fdad1020dbfd5154c3f042385ce86e2eefea2 LICENSE
-SHA1 90512b5f22be12f4a57825ba3eadcb91e95b9297 MANIFEST
-SHA1 7ed53d28b571422364a4e01bd71b687f0531d525 META.json
-SHA1 9c2e8ec9f002fa86611ac4c3611e177fe4ba9cec META.yml
-SHA1 9b08045c2280bb4b1548d1b252abed6a36791fa8 Makefile.PL
-SHA1 ba8439a70c9afa54b867de8e865879b1cef3c0f1 README
+SHA1 118262bfd22aea9d53f81b9321ceec9e2e7fe020 MANIFEST
+SHA1 1ec39409c7eead11cafc6ab65f2954c2bc0f1c0f META.json
+SHA1 17cd94945feb35e4f25a850b4c80ecb597149b9e META.yml
+SHA1 da5fc2d81a0fb43990362505bfb30b35e427b700 Makefile.PL
+SHA1 6bd57ad8e28e3c19719fc6bd958eb95b5152cc12 README
 SHA1 0d50c319d82b846ffabf47b1a5fb665efa6e62ed cpanfile
-SHA1 947b91c16d44a8ce9748a6012d62b20ecce9e05f dist.ini
-SHA1 3757a154888041023da50de82f1a92883d72d6b0 examples/benchmark.pl
-SHA1 84240bc3b451fb8063c65326e44531ee444cb7a4 lib/Mixin/Event/Dispatch.pm
-SHA1 d6d9165e1563c33e40157e821f1a2c4479e26a6c lib/Mixin/Event/Dispatch/Event.pm
+SHA1 898f0f04f69bb3ed0018309c594c4da9ee894dc7 dist.ini
+SHA1 854b857dcef02b5559b3e5b567ce50e84411b7c1 examples/benchmark.pl
+SHA1 2d18bfadd6b6608bca4f01ca36fb3f1c29415669 examples/subscribe-invoke.pl
+SHA1 8084d8de0e482d22efb587fe9626c2ab99333f59 lib/Mixin/Event/Dispatch.pm
+SHA1 476bbe0776d3e21cd84b7b02efba76d7012b2274 lib/Mixin/Event/Dispatch/Bus.pm
+SHA1 4c8049dc0fc0f86f041e84a67b7c842b03a3f5e7 lib/Mixin/Event/Dispatch/Bus.pod
+SHA1 503bb43eee702e13a4537e7fd0d14692494d51cc lib/Mixin/Event/Dispatch/Event.pm
 SHA1 985d9ded8d8ed7e344a09e52b1402e878e91da28 t/00-check-deps.t
-SHA1 5b5268e4d9df5d9941ac0b86d16386be65aeb56e t/00-compile.t
+SHA1 ef2cc97724cc9b81990ae0dde18bffe97e577826 t/00-compile.t
 SHA1 15dce7e5d0f2405af8bfffaebf65adb5c35ea078 t/000-report-versions-tiny.t
 SHA1 1e13e1d3f2013e19039b693098d341bb766e1197 t/cycle.t
 SHA1 d69b0b698fe7e26a955af024bc2ebf7df1105b81 t/event.t
@@ -38,19 +41,17 @@ SHA1 6d3d0c301c10bc355f25b7255e67812b1a5751e8 t/subscribe.t
 SHA1 f242e380d897f0430a668ea3f2938df75c0bef55 xt/author/test-eol.t
 SHA1 198d1665317c3d91e3bb81f0a3b8dad8d4d66f20 xt/release/common_spelling.t
 SHA1 c6c3c9f7fe12058b4771449dff874b1c450c982c xt/release/mojibake.t
-SHA1 a6d8370909ec0e0755d4bd691eb81d722cf94430 xt/release/pod-coverage.t
 SHA1 296928dbbcaffd1514ccc9b77a1e6e03cfe9b068 xt/release/pod-syntax.t
 SHA1 34513f89a70b96f6412fe2ef0ad4d475e8cac66c xt/release/synopsis.t
 SHA1 bbcd59d081d9940af5d43337ae85458075933829 xt/release/test-version.t
-SHA1 d1fe7d94b3edc7847eb187d4ee41f66e19cf8907 xt/release/unused-vars.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1
 
-iQEcBAEBAgAGBQJT5fAhAAoJEFKElMNpjtyDFoMIALJ6Oobt9kIwxm08Of+Jbt18
-8IkLXvOehxRVQ+/NkLGdOrbCLEBFNAp77uaXPxLOBRPGrKtDesD7rCNK5i+XRl4Z
-tGIXCCWXi92FkToBNY/HIVXMVV1kRBd5wXukerQiYIIjfS20l5XHbzaHktB9N/BT
-N/sULjhmUeGvTVybJnTN4IoGBd/Rfo9smDtH1DK9wvSO25F73DLdp4xkb2vsmvfT
-mz4XF9Acu2u+Adk6T8hohqF2elqHGYqpg78eHDWtT4tXPCNr0rgM4lv6iKYwT9Ir
-iHSXReuQ5jsItHjo+6kKBxc6/jUZlr14uEcezRhYhvLtsIb/XrzkC+MrbsWLTJc=
-=G+nN
+iQEcBAEBAgAGBQJT8GljAAoJEFKElMNpjtyDiGAH/iiW9tXEf4O1trG9qhzIXs9o
+y7yZIx4+3MAMmEmShjammaAI7xcwsj/wjxIg9xMC47uKdlNWZ/GlKUXPnEVS6wUq
+oMaQfLycG907KK5VVNQbEW1zfi/mPAmxp7Pr79wHwXGivRsrd3/5+9vWJh77xrS9
+5XutDDKWFPkV18KZWM4M7ZrXqRYrkU3Eodkyx3d4W3q9HjxX+KFTMlr7wM77gdgc
+ZpaUtSuWqzsYG1i8UdhFqhPEUWPEMy8JbsOJcvGpzvGAbSSGdYMhHAXYOZcZRG87
+0/SM7Z3W6N6bOXSIJOvvTtyBAT3pmGVwirYLcHkacaNMix1CqgcCHj1+JZMvzsw=
+=tODF
 -----END PGP SIGNATURE-----

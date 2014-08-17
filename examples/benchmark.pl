@@ -1,32 +1,25 @@
 #!/usr/bin/env perl
 use strict;
 use warnings;
-package Via::Inheritance;
-use parent qw(Mixin::Event::Dispatch);
-
-# no need for this peskiness
-use constant EVENT_DISPATCH_ON_FALLBACK => 0;
-
-sub new { bless {}, shift }
-
 package main;
 use Benchmark qw(:hireswallclock cmpthese);
+use Mixin::Event::Dispatch::Bus;
 use Mixin::Event::Dispatch::Event;
 
-my $obj = Via::Inheritance->new;
+my $obj = Mixin::Event::Dispatch::Bus->new;
 $obj->add_handler_for_event(
 	invoke => sub {
-		my $self = shift;
+		my ($ev) = @_;
 	},
 );
 $obj->add_handler_for_event(
 	two => sub {
-		my $self = shift;
+		my ($ev) = @_;
 	},
 ) for 1..2;
 $obj->subscribe_to_event(
 	subscribe => sub {
-		my $ev = shift;
+		my ($ev) = @_;
 	},
 );
 cmpthese -3 => {

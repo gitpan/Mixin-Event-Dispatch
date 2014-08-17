@@ -1,5 +1,5 @@
 package Mixin::Event::Dispatch::Event;
-$Mixin::Event::Dispatch::Event::VERSION = '1.005';
+$Mixin::Event::Dispatch::Event::VERSION = '1.006';
 use strict;
 use warnings;
 
@@ -16,7 +16,7 @@ Mixin::Event::Dispatch::Event - an event object
 
 =head1 VERSION
 
-Version 1.005
+Version 1.006
 
 =head1 SYNOPSIS
 
@@ -161,7 +161,7 @@ sub dispatch {
 	# Try::Tiny here is performance; 10k events/sec with Try::Tiny on
 	# an underpowered system, vs. 30k+ with plain eval.
 	eval {
-		while(!$self->is_stopped && @{$self->{handlers}}) {
+		while(!$self->{is_deferred} && @{$self->{handlers}}) {
 			local $self->{current_handler} = my $h = shift @{$self->{handlers}};
 			if(ref $h) {
 				if(reftype($h) eq 'CODE') {

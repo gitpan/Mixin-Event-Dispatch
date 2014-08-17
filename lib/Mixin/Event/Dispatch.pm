@@ -2,11 +2,8 @@ package Mixin::Event::Dispatch;
 # ABSTRACT: Mixin methods for simple event/message dispatch framework
 use strict;
 use warnings;
-use List::UtilsBy ();
-use Scalar::Util ();
-use Mixin::Event::Dispatch::Event;
 
-our $VERSION = '1.005';
+our $VERSION = '1.006';
 
 # Key name to use for event handlers. Nothing should be
 # accessing this directly so we don't mind something
@@ -25,7 +22,7 @@ Mixin::Event::Dispatch - mixin methods for simple event/message dispatch framewo
 
 =head1 VERSION
 
-Version 1.005
+Version 1.006
 
 =head1 SYNOPSIS
 
@@ -83,6 +80,12 @@ then this error will be re-thrown. As with the other handlers, you can have more
 
 =back
 
+=cut
+
+use List::UtilsBy ();
+use Scalar::Util ();
+use Mixin::Event::Dispatch::Event;
+
 =head1 METHODS
 
 =cut
@@ -101,18 +104,18 @@ sub invoke_event {
 	my ($self, $event_name, @param) = @_;
 	my $handlers = $self->event_handlers->{$event_name} || [];
 	unless(@$handlers) {
-		local $@;
 		# Legacy flag - when set, pass control to on_$event_name
 		# if we don't have a handler defined.
-		return $self unless $self->EVENT_DISPATCH_ON_FALLBACK;
-		return $self unless my $code = $self->can("on_$event_name");
-		eval {
-			$code->($self, @_);
-			1;
-		} or do {
-			die $@ if $event_name eq 'event_error';
-			$self->invoke_event(event_error => $@) or die "$@ and no event_error handler found";
-		};
+		if($self->EVENT_DISPATCH_ON_FALLBACK && (my $code = $self->can("on_$event_name"))) {
+			local $@;
+			eval {
+				$code->($self, @_);
+				1;
+			} or do {
+				die $@ if $event_name eq 'event_error';
+				$self->invoke_event(event_error => $@) or die "$@ and no event_error handler found";
+			};
+		}
 		return $self;
 	}
 
@@ -325,6 +328,10 @@ There are at least a dozen similar modules already on CPAN, here's a small sampl
 
 =over 4
 
+=item * L<Event::Distributor> - uses L<Future> to sequence callbacks, implementing
+the concepts discussed in
+L<Event-Reflexive programming|http://leonerds-code.blogspot.co.uk/search/label/event-reflexive>
+
 =item * L<Object::Event> - event callback interface used in several L<AnyEvent> modules.
 
 =item * L<Ambrosia::Event> - part of the L<Ambrosia> web application framework
@@ -343,6 +350,10 @@ and callback interfaces.
 If you're looking for usage examples, try the following:
 
 =over 4
+
+=item * L<Adapter::Async>
+
+=item * L<Net::Async::AMQP>
 
 =item * L<EntityModel> - uses this as the underlying event-passing mechanism, with some
 support in L<EntityModel::Class> for indicating event usage metadata
